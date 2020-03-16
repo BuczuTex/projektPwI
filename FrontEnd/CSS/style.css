@@ -1,0 +1,46 @@
+#baner{
+    display:block;
+    margin-right:auto;
+}
+.donava{
+    width:20%;
+    padding:2px;
+    text-align: center;
+    font-size: 23px;
+    background-color: silver;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+body{
+    background-color: darkgrey;
+    display:block;
+    margin:0;
+    padding:0;
+}
+a{
+    display:block;
+    text-decoration: none;
+    color:white;
+}
+nav a:hover{
+    background-color: springgreen;
+}
+.donava:hover{
+    background-color:springgreen;
+}
+header{
+    background-color: darkgrey;
+}
+aside{
+    width:14%;
+    height:624px;
+    display:inline-block;
+}
+#ad2{
+    display:block;
+    margin-left:527%;
+}
