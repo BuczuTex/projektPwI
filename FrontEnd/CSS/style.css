@@ -17,7 +17,6 @@ ul{
 }
 body{
     background-color: darkgrey;
-    display:block;
     margin:0;
     padding:0;
 }
@@ -36,9 +35,26 @@ header{
     background-color: darkgrey;
 }
 aside{
-    display:block;
+    float:right;
     height:599px;
     width:162px;
-    float:right;
     margin-top: 20px;
+}
+.container{
+    display:flex;
+}
+.card{
+    display:inline-flex;
+    width:19%;
+    height:10%;
+}
+h2{
+    margin-top:20px;
+    text-align: center;
+}
+#carouselExampleControls{
+    margin-left:50px;
+}
+#carouselExampleControls2{
+    margin-left:50px;
 }
