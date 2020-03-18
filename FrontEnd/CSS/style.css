@@ -34,15 +34,6 @@ nav a:hover{
 header{
     background-color: darkgrey;
 }
-aside{
-    float:right;
-    height:56%;
-    width:162px;
-    margin-top: 20px;
-}
-.container{
-    display:flex;
-}
 .card{
     display:inline-flex;
     width:17%;
@@ -66,6 +57,22 @@ footer h3{
     color:white;
     background-color:gray;
     text-align: center;
-    margin-top: 29px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
+}
+.content{
+    display: grid;
+}
+main{
+    grid-row:1;
+    grid-column:auto;
+}
+aside{
+    margin-top: 20px;
+    grid-row:1;
+    grid-column:2;
+    justify-self: end;
+}
+#ad{
+    max-width:100%;
+    height:auto;
 }
