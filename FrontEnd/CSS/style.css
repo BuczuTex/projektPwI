@@ -36,7 +36,7 @@ header{
 }
 aside{
     float:right;
-    height:599px;
+    height:56%;
     width:162px;
     margin-top: 20px;
 }
@@ -45,16 +45,20 @@ aside{
 }
 .card{
     display:inline-flex;
-    width:19%;
+    width:17%;
     height:10%;
 }
 h2{
     margin-top:20px;
     text-align: center;
 }
-#carouselExampleControls{
-    margin-left:50px;
+.card-price-deleted{
+    color:gray;
+    display: inline;
+    text-decoration: line-through;
+    text-decoration-color:red;
 }
-#carouselExampleControls2{
-    margin-left:50px;
+.card-new-price{
+    display: inline;
+    color:red;
 }
