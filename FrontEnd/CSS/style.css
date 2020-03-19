@@ -97,3 +97,27 @@ main{
     height:20px;
     margin-top:94px;
 }
+.content2{
+    display: grid;
+}
+.login{
+    margin-top: 10px;
+    grid-row:1;
+    grid-column:1;
+}
+.rejestracja{
+    margin-top: 10px;
+    grid-row:1;
+    grid-column: 2;
+}
+.card-login{
+    width:39%;
+    height:79%;
+    float:right;
+}
+.card-register{
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 39%;
+    height: 79%;
+}

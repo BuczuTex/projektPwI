@@ -58,7 +58,8 @@ footer h3{
 }
 .nazwa_produktu{
     position:absolute;
-    left:220px;
+    left:34.4%;
+    word-wrap: break-word;
 }
 a{
     display:block;
