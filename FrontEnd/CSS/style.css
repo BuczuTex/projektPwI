@@ -20,7 +20,7 @@ body{
     margin:0;
     padding:0;
 }
-a{
+nav a{
     display:block;
     text-decoration: none;
     color:white;
@@ -40,6 +40,7 @@ header{
     display:inline-flex;
     width:17%;
     height:10%;
+    color:black;
 }
 h2{
     margin-top:20px;
@@ -77,4 +78,22 @@ main{
 #ad{
     max-width:100%;
     height:auto;
+}
+.card:hover{
+    color:black;
+    text-decoration:none;
+}
+.carousel-control-prev{
+    opacity: 1 !important;
+    background-color:darkgrey;
+    width:20px;
+    height:20px;
+    margin-top:94px;
+}
+.carousel-control-next{
+    opacity: 1 !important;
+    background-color:darkgrey;
+    width:20px;
+    height:20px;
+    margin-top:94px;
 }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Sklep Komputerowy</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="CSS/style3.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="icon" href="obrazki/icon.png">
+    </head>
+    <body>
+        <header>
+            <a href = "mainPage.html">
+                <img src="obrazki/komputer.png" alt="banner" id="banner">
+            </a>
+        </header>
+        <nav>
+            <ul>
+                <li class="donava"><a href="produkty.html">Produkty</a></li>
+                <li class="donava"><a href="koszyk.html">Koszyk (2)</a></li>
+                <li class="donava"><a href="kontakt.html">Kontakt</a></li>
+                <li class="donava"><a href="logowanie.html">Zaloguj się</a></li>
+            </ul>
+          </nav>
+          <div class="content">
+            <main>
+                <div class="card koszyk">
+                    <div class="card-body">
+                        <h5 class="card-title">TWÓJ KOSZYK (2)</h5>
+                     </div>
+                </div>
+                <div class="koszyk">
+                    <div class="card produkt1">
+                        <div class="card-body">
+                          <h5 class="card-title nazwa_produktu">Gigabyte GeForce GTX 1050 Ti OC LP 4GB GDDR5</h5>
+                          <img class="zdjecie_produktu" src="obrazki/produkty/shopping.png" alt="GTX1050TI">
+                          <div class="form-check button1">
+                            <input class="form-check-input" type="checkbox" value="" id="gwarancja">
+                            <label class="form-check-label" for="gwarancja">
+                                Gwarancja na 2 lata
+                            </label>
+                          </div>
+                          <div class="form-check button">
+                            <input class="form-check-input" type="checkbox" value="" id="dostawa">
+                            <label class="form-check-label" for="dostawa">
+                                Szybka dostawa
+                            </label>
+                          </div>
+                        </div>
+                        <p class="card-price">650zł</p>
+                      </div>
+                      <div class="card produkt">
+                        <div class="card-body">
+                          <h5 class="card-title nazwa_produktu">SteelSeries Rival 310 Howl Edition</h5>
+                          <img class="zdjecie_produktu" src="obrazki/produkty/rival310-howl.jpg" alt="rival310">
+                          <div class="form-check button1">
+                            <input class="form-check-input" type="checkbox" value="" id="gwarancja2">
+                            <label class="form-check-label" for="gwarancja2">
+                                Gwarancja na 2 lata
+                            </label>
+                          </div>
+                          <div class="form-check button">
+                            <input class="form-check-input" type="checkbox" value="" id="dostawa2">
+                            <label class="form-check-label" for="dostawa2">
+                                Szybka dostawa
+                            </label>
+                          </div>
+                        </div>
+                        <p class="card-price">219zł</p>
+                      </div>
+                </div>
+            </main>
+            <div class="container">
+                <div class="column2">
+                    <div class="card wybor-dostawcy">
+                        <div class="card-body">
+                            <h5>Wybierz sposób dostawy</h5>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioList" id="radio1" value="opcja1">
+                                <label class="form-check-label" for="radio1">
+                                  Odbiór osobisty
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioList" id="radio2" value="opcja2">
+                                <label class="form-check-label" for="radio2">
+                                  Poczta Polska
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioList" id="radio3" value="opcja3">
+                                <label class="form-check-label" for="radio3">
+                                  UPS
+                                </label>
+                              </div>
+                              <div class="form-check">
+                                <input class="form-check-input" type="radio" name="radioList" id="radio4" value="opcja4">
+                                <label class="form-check-label" for="radio4">
+                                  Paczkomat Inpost
+                                </label>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="card kod-rabatowy">
+                        <div class="card-body">
+                            <h5>Wpisz kod rabatowy</h5>
+                            <input class="form-control" type="text">
+                            <h5 style="margin-top:20px;">Wpisz numer karty podarunkowej</h5>
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column3">
+                <div class="card zamow">
+                    <div class="card-body">
+                        <h4>Podsumowanie zamówienia</h4>
+                        <h5>Wartość zakupów: 869zł</h5>
+                        <h5>Wartość dostawy: 0zł</h5>
+                        <h5>Łączna wartość zamówienia: 869zł</h5>
+                        <button type="button" class="btn btn-dark zamowienie">Podaj dane do zamówienia</button>
+                    </div>
+                </div>
+                <div class="kontakt" style="padding:10px 20px 20px 20px;">
+                    <h4>Skontaktuj się z nami<br>Telefon stacjonarny: 87 918 019<br>Telefon komórkowy: 512 091 728
+                    <br><a href="mailto:example@example.com">Mail:example@example.com</a></h4>
+                </div>
+            </div>
+        </div>
+          <footer>
+            <h3>Sklep internetowy 2020 Nie ruszać strony!</h3>
+          </footer>
+    </body>
+</html>
