@@ -98,26 +98,21 @@ main{
     margin-top:94px;
 }
 .content2{
-    display: grid;
+    display: flex;
 }
 .login{
     margin-top: 10px;
-    grid-row:1;
-    grid-column:1;
+    flex:1;
 }
 .rejestracja{
     margin-top: 10px;
-    grid-row:1;
-    grid-column: 2;
+    flex:1;
 }
 .card-login{
-    width:39%;
-    height:79%;
-    float:right;
+    width: 300px;
+    height: 300px;
 }
 .card-register{
-    margin-left: 10px;
-    margin-bottom: 10px;
     width: 300px;
-    height: 79%;
+    height: 400px;
 }
