@@ -37,23 +37,32 @@ header{
     background-color: darkgrey;
 }
 .content{
-    display: grid;
+    display: flex;
     margin-top: 10px;
-    grid-template-columns: 600px;
 }
 .zdjecie{
-    grid-row:1;
-    grid-column: 1;
+    flex:1.2;
 }
 .description{
-    grid-row:1;
-    grid-column:2;
+    flex:1;
 }
 .zamow{
     position: relative;
+    flex:1;
     margin-left: 20px;
-    grid-row:1;
-    grid-column:3;
+}
+.long-description{
+    width:67.7%;
+    margin-top: 10px;
+}
+.opinie{
+    width: 31%;
+    margin-top: 10px;
+    margin-left: 20px;
+    flex:1;
+}
+.opinie-opis{
+    display: flex
 }
 .zamow .card-body{
     height: 200px;
@@ -78,21 +87,6 @@ h6{
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-.long-description{
-    margin-top: 10px;
-    grid-row: 1;
-    grid-column: 1;
-}
-.opis-uzytkownicy{
-    display:grid;
-    grid-template-columns: 67.7%;
-}
-.opinie{
-    margin-top: 10px;
-    margin-left: 20px;
-    grid-row:1;
-    grid-column: 2;
 }
 footer h3{
     color:white;
