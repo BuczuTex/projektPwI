@@ -1,0 +1,94 @@
+#baner{
+    display:block;
+    margin-right:auto;
+}
+.donava{
+    width:25%;
+    padding:2px;
+    text-align: center;
+    font-size: 23px;
+    background-color: silver;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+body{
+    background-color: darkgrey;
+    margin:0;
+    padding:0;
+}
+a{
+    display:block;
+    text-decoration: none;
+    color:white;
+}
+nav a:hover{
+    background-color: springgreen;
+    text-decoration: none;
+    color:white;
+}
+.donava:hover{
+    background-color:springgreen;
+}
+header{
+    background-color: darkgrey;
+}
+footer h3{
+    color:white;
+    background-color:gray;
+    text-align: center;
+    margin-bottom: 0;
+}
+.content{
+    display: grid;
+    grid-template-columns: 14%  75.18% 10.82%;
+}
+main{
+    grid-row:1;
+    grid-column:auto;
+}
+.content aside{
+    margin-top: 20px;
+    grid-row:1;
+    grid-column:3;
+    justify-self: end;
+}
+#ad{
+    max-width:100%;
+    height:auto;
+}
+.content nav{
+    margin-top: 20px;
+    background-color: darkgray;
+    border: solid 1px gray;
+    grid-row:1;
+    grid-column:1;
+}
+.produkt1{
+    position: relative;
+    margin-top:20px;
+}
+.zdjecie_produktu{
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:18%;
+    height:84.7%;
+}
+.price{
+    position: absolute;
+    right:0px;
+}
+.produkt1 .card-body{
+    display:block;
+    text-decoration: none;
+    color:black;
+}
+.produkt .card-body{
+    display:block;
+    text-decoration: none;
+    color:black;
+}

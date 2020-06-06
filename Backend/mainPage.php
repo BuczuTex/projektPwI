@@ -1,0 +1,244 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>Sklep Komputerowy</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="icon" href="obrazki/icon.png">
+    </head>
+    <body>
+    <?php if(isset($_GET['Error'])){
+            echo '<script> alert("'.$_GET['Error'].'")</script>';
+        }?>
+        <header>
+            <a href = "mainPage.html">
+                <img src="obrazki/komputer.png" alt="banner" id="banner">
+            </a>
+        </header>
+        <nav>
+            <ul>
+            <li class="donava"><a href="produkty.php">Produkty</a></li>
+                <li class="donava"><a href="koszyk.php">Koszyk</a></li>
+                <li class="donava"><a href="kontakt.html">Kontakt</a></li>
+                <?php if(empty($_SESSION["id"])): ?>
+                <li class="donava"><a href="logowanie.php">Zaloguj się</a></li>
+                <?php else: ?>
+                  <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['id']?></a></li>
+                <?php endif;?>
+            </ul>
+          </nav>
+          <div class="content">
+        <main>
+            <h2>NAJLEPSZE OKAZJE!!!</h2>
+            <div class="container">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="carousel-item">
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                          <a class="card" href="produkty/geforce.html">
+                            <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                            <div class="card-body">
+                              <p class="card-text">GEFORCE GTX 1050TI</p>
+                              <p class="card-price-deleted">700zł</p>
+                              <p class="card-new-price">650zł</p>
+                            </div>
+                          </a>
+                          <a class="card" href="produkty/geforce.html">
+                            <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                            <div class="card-body">
+                              <p class="card-text">GEFORCE GTX 1050TI</p>
+                              <p class="card-price-deleted">700zł</p>
+                              <p class="card-new-price">650zł</p>
+                            </div>
+                          </a>
+                          <a class="card" href="produkty/geforce.html">
+                            <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                            <div class="card-body">
+                              <p class="card-text">GEFORCE GTX 1050TI</p>
+                              <p class="card-price-deleted">700zł</p>
+                              <p class="card-new-price">650zł</p>
+                            </div>
+                          </a>
+                      </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <h2>NAJCZĘŚCIEJ KUPOWANE</h2>
+            <div class="container">
+              <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a class="card" href="produkty/geforce.html">
+                        <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                        <div class="card-body">
+                          <p class="card-text">GEFORCE GTX 1050TI</p>
+                          <p class="card-price-deleted">700zł</p>
+                          <p class="card-new-price">650zł</p>
+                        </div>
+                      </a>
+                      <a class="card" href="produkty/geforce.html">
+                        <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                        <div class="card-body">
+                          <p class="card-text">GEFORCE GTX 1050TI</p>
+                          <p class="card-price-deleted">700zł</p>
+                          <p class="card-new-price">650zł</p>
+                        </div>
+                      </a>
+                      <a class="card" href="produkty/geforce.html">
+                        <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                        <div class="card-body">
+                          <p class="card-text">GEFORCE GTX 1050TI</p>
+                          <p class="card-price-deleted">700zł</p>
+                          <p class="card-new-price">650zł</p>
+                        </div>
+                      </a>
+                      <a class="card" href="produkty/geforce.html">
+                        <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                        <div class="card-body">
+                          <p class="card-text">GEFORCE GTX 1050TI</p>
+                          <p class="card-price-deleted">700zł</p>
+                          <p class="card-new-price">650zł</p>
+                        </div>
+                      </a>
+                      <a class="card" href="produkty/geforce.html">
+                        <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                        <div class="card-body">
+                          <p class="card-text">GEFORCE GTX 1050TI</p>
+                          <p class="card-price-deleted">700zł</p>
+                          <p class="card-new-price">650zł</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a class="card" href="produkty/geforce.html">
+                        <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                        <div class="card-body">
+                          <p class="card-text">GEFORCE GTX 1050TI</p>
+                          <p class="card-price-deleted">700zł</p>
+                          <p class="card-new-price">650zł</p>
+                        </div>
+                      </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                        <a class="card" href="produkty/geforce.html">
+                          <img class="card-img-top" src="obrazki/produkty/shopping.png" alt="Card image cap" width="100" height="100">
+                          <div class="card-body">
+                            <p class="card-text">GEFORCE GTX 1050TI</p>
+                            <p class="card-price-deleted">700zł</p>
+                            <p class="card-new-price">650zł</p>
+                          </div>
+                        </a>
+                    </div>
+                  <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+        </main>
+        <aside>
+          <img src = "obrazki/scv.jpg" alt="ad" id="ad">
+        </aside>
+      </div>
+        <footer>
+          <h3>Sklep internetowy 2020 Nie ruszać strony!</h3>
+        </footer>
+    </body>
+</html>

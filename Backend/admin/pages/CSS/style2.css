@@ -1,0 +1,45 @@
+header h1{
+    text-align: center;
+    background-color: darkgrey;
+    color:white;
+    margin-right: auto;
+}
+body{
+    background-color: gray;
+    margin:0;
+    padding:0;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+nav a{
+    display: block;
+    color:white;
+    background-color: darkgray;
+}
+nav a:hover{
+    text-decoration: none;
+    background-color: gold;
+}
+nav li{
+    width:40.3%;
+    text-align: center;
+    font-size: 23px;
+}
+.content{
+    display: flex;
+    padding:0;
+    margin-top:10px;
+}
+.zamowienie1{
+    width: 30%;
+    flex:1;
+}
+.zamowienie{
+    flex:1;
+    margin-left: 10px;
+    width: 30%;
+}

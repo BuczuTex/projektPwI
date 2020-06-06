@@ -1,0 +1,96 @@
+#baner{
+    display:block;
+    margin-right:auto;
+}
+.donava{
+    width:25%;
+    padding:2px;
+    text-align: center;
+    font-size: 23px;
+    background-color: silver;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+body{
+    background-color: darkgrey;
+    margin:0;
+    padding:0;
+}
+nav a{
+    display:block;
+    text-decoration: none;
+    color:white;
+}
+nav a:hover{
+    background-color: springgreen;
+    text-decoration: none;
+    color:white;
+}
+.donava:hover{
+    background-color:springgreen;
+}
+header{
+    background-color: darkgrey;
+}
+.content{
+    display: flex;
+    margin-top: 10px;
+}
+.zdjecie{
+    flex:1.2;
+}
+.description{
+    flex:1;
+}
+.zamow{
+    position: relative;
+    flex:1;
+    margin-left: 20px;
+}
+.long-description{
+    width:67.7%;
+    margin-top: 10px;
+}
+.opinie{
+    width: 31%;
+    margin-top: 10px;
+    margin-left: 20px;
+    flex:1;
+}
+.opinie-opis{
+    display: flex
+}
+.zamow .card-body{
+    height: 200px;
+}
+.description h5{
+    margin-top:30px;
+}
+h6{
+    margin-top: 31.6px;
+}
+#sel1{
+    display: inline-block;
+    position:absolute;
+    width:80px;
+    left:20px
+}
+.buttonik{
+    position: absolute;
+    right:20px;
+}
+.zd-prod{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer h3{
+    color:white;
+    background-color:gray;
+    text-align: center;
+    margin-bottom: 0;
+}

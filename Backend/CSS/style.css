@@ -1,0 +1,118 @@
+#baner{
+    display:block;
+    margin-right:auto;
+}
+.donava{
+    width:25%;
+    padding:2px;
+    text-align: center;
+    font-size: 23px;
+    background-color: silver;
+}
+ul{
+    display: flex;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+body{
+    background-color: darkgrey;
+    margin:0;
+    padding:0;
+}
+nav a{
+    display:block;
+    text-decoration: none;
+    color:white;
+}
+nav a:hover{
+    background-color: springgreen;
+    text-decoration: none;
+    color:white;
+}
+.donava:hover{
+    background-color:springgreen;
+}
+header{
+    background-color: darkgrey;
+}
+.card{
+    display:inline-flex;
+    width:17%;
+    height:10%;
+    color:black;
+}
+h2{
+    margin-top:20px;
+    text-align: center;
+}
+.card-price-deleted{
+    color:gray;
+    display: inline;
+    text-decoration: line-through;
+    text-decoration-color:red;
+}
+.card-new-price{
+    display: inline;
+    color:red;
+}
+footer h3{
+    color:white;
+    background-color:gray;
+    text-align: center;
+    margin-bottom: 0;
+}
+.content{
+    display: grid;
+}
+main{
+    grid-row:1;
+    grid-column:auto;
+}
+.content aside{
+    margin-top: 20px;
+    grid-row:1;
+    grid-column:2;
+    justify-self: end;
+}
+#ad{
+    max-width:100%;
+    height:auto;
+}
+.card:hover{
+    color:black;
+    text-decoration:none;
+}
+.carousel-control-prev{
+    opacity: 1 !important;
+    background-color:darkgrey;
+    width:20px;
+    height:20px;
+    margin-top:94px;
+}
+.carousel-control-next{
+    opacity: 1 !important;
+    background-color:darkgrey;
+    width:20px;
+    height:20px;
+    margin-top:94px;
+}
+.content2{
+    display: flex;
+}
+.login{
+    margin-top: 10px;
+    flex:1;
+}
+.rejestracja{
+    margin-top: 10px;
+    flex:1;
+}
+.card-login{
+    width: 300px;
+    height: 300px;
+}
+.card-register{
+    width: 300px;
+    height: auto;
+}
