@@ -17,17 +17,20 @@
         }
     ?>
         <header>
-            <a href = "mainPage.html">
+            <a href = "mainPage.php">
                 <img src="obrazki/komputer.png" alt="banner" id="banner">
             </a>
         </header>
         <nav>
-            <ul>
+        <ul>
             <li class="donava"><a href="produkty.php">Produkty</a></li>
                 <li class="donava"><a href="koszyk.php">Koszyk</a></li>
                 <li class="donava"><a href="kontakt.html">Kontakt</a></li>
-                <?php if(empty($_SESSION["id"])): ?>
+                <?php if(empty($_SESSION["id"]) and empty($_SESSION['admin'])): ?>
                 <li class="donava"><a href="logowanie.php">Zaloguj się</a></li>
+                <?php elseif(!empty($_SESSION['admin'])): ?>
+                  <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['admin']?></a></li>
+                  <li class="donava"><a href="admin/pages/panel-glowna.php">Panel administracyjny</a></li>
                 <?php else: ?>
                   <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['id']?></a></li>
                 <?php endif;?>

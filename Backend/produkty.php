@@ -1,12 +1,6 @@
-<?php
+<?php 
 session_start();
-$dsn = 'mysql:dbname=id12999600_sklep_komputerowy;host=hostname';
-$user = 'id12999600_root';
-try{
-  $pdo = new PDO($dsn, $user);
-} catch (PDOException $e){
-  echo 'Nie udało się połączyć: '.$e->getMessage();
-}
+require('db.php'); 
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -21,18 +15,24 @@ try{
 <link rel="icon" href="obrazki/icon.png">
     </head>
     <body>
+    <?php if(isset($_GET['Error'])){
+            echo '<script> alert("'.$_GET['Error'].'")</script>';
+        }?>
         <header>
-            <a href = "mainPage.html">
+            <a href = "mainPage.php">
                 <img src="obrazki/komputer.png" alt="banner" id="banner">
             </a>
         </header>
         <nav>
-            <ul>
-            <li class="donava"><a href="produkty.php">Produkty</a></li>
+        <ul>
+          <li class="donava"><a href="produkty.php">Produkty</a></li>
                 <li class="donava"><a href="koszyk.php">Koszyk</a></li>
                 <li class="donava"><a href="kontakt.html">Kontakt</a></li>
-                <?php if(empty($_SESSION["id"])): ?>
+                <?php if(empty($_SESSION["id"]) and empty($_SESSION['admin'])): ?>
                 <li class="donava"><a href="logowanie.php">Zaloguj się</a></li>
+                <?php elseif(!empty($_SESSION['admin'])): ?>
+                  <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['admin']?></a></li>
+                  <li class="donava"><a href="admin/pages/panel-glowna.php">Panel administracyjny</a></li>
                 <?php else: ?>
                   <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['id']?></a></li>
                 <?php endif;?>
@@ -108,7 +108,7 @@ try{
             </nav>
             <main>
             <?php
-            $sql = 'SELECT nazwa_produktu, kategoria, link, zdjecie, krotki_opis, alt, cena, cena_promocyjna FROM produkty';
+            $sql = 'SELECT id_produktu, nazwa_produktu, kategoria, zdjecie, krotki_opis, alt, cena, cena_promocyjna FROM produkty';
             $result;
             if(!empty($_POST['search'])) $sql .= ' WHERE nazwa_produktu LIKE '.'"%'.$_POST['search'].'%"'.' ';
                 foreach($_POST as $category){
@@ -126,7 +126,7 @@ try{
             if(isset($_POST['sort'])) $sql .= $_POST['sort'];
             $result = $pdo->query($sql);
             while($row = $result->fetch()){
-              echo '<div class="card w-100 produkt"> <a class="card-body" href='.$row['link'].'>';
+              echo '<div class="card w-100 produkt"> <a class="card-body" href=produkty/produkt.php?id='.$row['id_produktu'].'>';
               echo '<h5 class="card-title">'.$row['nazwa_produktu'].'</h5>';
               echo '<img class="zdjecie_produktu" src="'.$row['zdjecie'].'" alt='.$row['alt'].'>';
               foreach(explode('/',$row['krotki_opis']) as $description){

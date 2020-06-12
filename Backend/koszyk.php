@@ -1,12 +1,6 @@
 <?php
 session_start();
-$dsn = 'mysql:dbname=id12999600_sklep_komputerowy;host=hostname';
-$user = 'id12999600_root';
-try{
-  $pdo = new PDO($dsn, $user);
-} catch (PDOException $e){
-  echo 'Nie udało się połączyć: '.$e->getMessage();
-}
+require('db.php');
 $sql = "SELECT nazwa_produktu,p.ilosc, pr.cena, p.id_produktu, zdjecie, alt FROM produkty p JOIN produkty_w_koszyku pr ON(p.id_produktu = pr.id_produktu)
         WHERE id_koszyka = (SELECT id_koszyka FROM koszyk ko JOIN klienci k ON(k.id_klienta=ko.id_klienta) 
         WHERE nazwa_uzytkownika = ?)";
@@ -25,21 +19,21 @@ $pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
 <link rel="icon" href="obrazki/icon.png">
     </head>
     <body>
-    <?php if(isset($_GET['Error'])){
-            echo '<script> alert("'.$_GET['Error'].'")</script>';
-        }?>
         <header>
-            <a href = "mainPage.html">
+            <a href = "mainPage.php">
                 <img src="obrazki/komputer.png" alt="banner" id="banner">
             </a>
         </header>
         <nav>
-            <ul>
+        <ul>
             <li class="donava"><a href="produkty.php">Produkty</a></li>
                 <li class="donava"><a href="koszyk.php">Koszyk</a></li>
                 <li class="donava"><a href="kontakt.html">Kontakt</a></li>
-                <?php if(empty($_SESSION["id"])): ?>
+                <?php if(empty($_SESSION["id"]) and empty($_SESSION['admin'])): ?>
                 <li class="donava"><a href="logowanie.php">Zaloguj się</a></li>
+                <?php elseif(!empty($_SESSION['admin'])): ?>
+                  <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['admin']?></a></li>
+                  <li class="donava"><a href="admin/pages/panel-glowna.php">Panel administracyjny</a></li>
                 <?php else: ?>
                   <li class="donava"><a href="logout.php">Witaj <?=$_SESSION['id']?></a></li>
                 <?php endif;?>
@@ -69,6 +63,7 @@ $pdo->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
                     $cenaK +=$row['cena'];
                   }
                 }
+                else if(!empty($_SESSION['admin'])) echo '<p style="color:white;">Aby dokonać zamówienia, należy przejść do panelu administracyjnego</p>';
                 else echo '<p style="color:white;">Aby dokonać zamówienia, należy się zalogować</p>';
                 ?>
               </div>

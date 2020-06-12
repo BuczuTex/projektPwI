@@ -1,12 +1,5 @@
 <?php
-$dsn = 'mysql:dbname=id12999600_sklep_komputerowy;host=hostname';
-$user = 'id12999600_root';
-$sql = "SELECT * FROM klienci WHERE email=? OR nazwa_uzytkownika=?";
-try{
-$pdo = new PDO($dsn, $user);
-} catch (PDOException $e){
-echo 'Nie udało się połączyć: '.$e->getMessage();
-}
+require('db.php');
 
 if(!empty($_POST['emailReg']) and !empty($_POST['userReg']) and !empty($_POST['hasloReg']) and !empty($_POST['haslo2Reg'])
    and !empty($_POST['imieReg']) and !empty($_POST['nazwiskoReg']) and !empty($_POST['miastoReg']) and !empty($_POST['adresReg'])

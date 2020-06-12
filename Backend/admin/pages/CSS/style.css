@@ -15,6 +15,9 @@ ul{
     padding:0;
     list-style-type:none;
 }
+.buttonik{
+    margin-top: 20px;
+}
 nav a{
     display: block;
     color:white;
@@ -60,6 +63,22 @@ h5{
     top:1px;
     right:60px;
 }
+.zamow{
+    position: absolute;
+    top: 1px;
+    right: 120px;
+}
 .produkt{
     margin-top: 10px;
+}
+.login{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-login{
+    width: 300px;
+    height: auto;
+    text-align: center;
 }
